@@ -16,5 +16,18 @@ namespace ApiEnCouches.Controllers.User
             var name = User.FindFirstValue(ClaimTypes.Name);
             return Ok(new { Email = email, Name = name });
         }
+
+        //[HttpPost("login")]
+        //public async Task<IActionResult> Login()
+        //{
+
+        //}
+
+
+        //[HttpPost("register")]
+        //public async Task<IActionResult> Register()
+        //{
+
+        //}
     }
 }

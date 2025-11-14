@@ -37,5 +37,16 @@ namespace ApiEnCouches.Controllers.User
             }
             return Ok(slotDto);
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateSlot(int id, [FromBody] GetTimeslotDto slotDto)
+        {
+            GetTimeslotDto? updatedSlot = await slotService.UpdateSlot(id, slotDto);
+            if (updatedSlot == null)
+            {
+                return NotFound();
+            }
+            return Ok(updatedSlot);
+        }
     }
 }
